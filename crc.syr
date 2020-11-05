@@ -125,17 +125,16 @@ Synthesizing Unit <crc>.
     Found 1-bit register for signal <s3>.
     Found 1-bit register for signal <s4>.
     Found 1-bit register for signal <s5>.
-    Found 1-bit register for signal <w2>.
     Found 5-bit register for signal <crc>.
     Found 3-bit register for signal <counter>.
     Found 1-bit register for signal <s1>.
     Found 1-bit adder for signal <w1> created at line 46.
-    Found 1-bit adder for signal <s2_w1_add_5_OUT<0>> created at line 55.
+    Found 1-bit adder for signal <s2_w1_add_5_OUT<0>> created at line 56.
     Found 3-bit adder for signal <counter[2]_GND_1_o_add_6_OUT> created at line 60.
-    Found 1-bit 4-to-1 multiplexer for signal <n0040> created at line 46.
+    Found 1-bit 4-to-1 multiplexer for signal <n0046> created at line 46.
     Summary:
 	inferred   3 Adder/Subtractor(s).
-	inferred  14 D-type flip-flop(s).
+	inferred  13 D-type flip-flop(s).
 	inferred   1 Multiplexer(s).
 Unit <crc> synthesized.
 
@@ -146,8 +145,7 @@ Macro Statistics
 # Adders/Subtractors                                   : 3
  1-bit adder                                           : 2
  3-bit adder                                           : 1
-# Registers                                            : 4
- 1-bit register                                        : 1
+# Registers                                            : 3
  3-bit register                                        : 1
  5-bit register                                        : 2
 # Multiplexers                                         : 1
@@ -172,8 +170,8 @@ Macro Statistics
  1-bit adder                                           : 2
 # Counters                                             : 1
  3-bit up counter                                      : 1
-# Registers                                            : 11
- Flip-Flops                                            : 11
+# Registers                                            : 10
+ Flip-Flops                                            : 10
 # Multiplexers                                         : 1
  1-bit 4-to-1 multiplexer                              : 1
 
@@ -182,10 +180,9 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-INFO:Xst:2261 - The FF/Latch <w2> in Unit <crc> is equivalent to the following FF/Latch, which will be removed : <crc_0> 
-INFO:Xst:2261 - The FF/Latch <s5> in Unit <crc> is equivalent to the following FF/Latch, which will be removed : <crc_1> 
-INFO:Xst:2261 - The FF/Latch <s4> in Unit <crc> is equivalent to the following FF/Latch, which will be removed : <crc_2> 
 INFO:Xst:2261 - The FF/Latch <s2> in Unit <crc> is equivalent to the following FF/Latch, which will be removed : <crc_4> 
+INFO:Xst:2261 - The FF/Latch <s4> in Unit <crc> is equivalent to the following FF/Latch, which will be removed : <crc_2> 
+INFO:Xst:2261 - The FF/Latch <s5> in Unit <crc> is equivalent to the following FF/Latch, which will be removed : <crc_1> 
 
 Optimizing unit <crc> ...
 
@@ -226,13 +223,11 @@ Primitive and Black Box Usage:
 # BELS                             : 7
 #      INV                         : 1
 #      LUT2                        : 2
-#      LUT3                        : 1
-#      LUT4                        : 2
+#      LUT3                        : 2
+#      LUT4                        : 1
 #      LUT6                        : 1
 # FlipFlops/Latches                : 10
-#      FD                          : 1
-#      FDE                         : 7
-#      FDRE                        : 2
+#      FDRE                        : 10
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 10
@@ -255,7 +250,7 @@ Slice Logic Distribution:
    Number with an unused Flip Flop:       2  out of     12    16%  
    Number with an unused LUT:             5  out of     12    41%  
    Number of fully used LUT-FF pairs:     5  out of     12    41%  
-   Number of unique control sets:         3
+   Number of unique control sets:         1
 
 IO Utilization: 
  Number of IOs:                          11
@@ -296,9 +291,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 2.648ns (Maximum Frequency: 377.643MHz)
-   Minimum input arrival time before clock: 3.506ns
-   Maximum output required time after clock: 3.668ns
+   Minimum period: 2.675ns (Maximum Frequency: 373.804MHz)
+   Minimum input arrival time before clock: 3.733ns
+   Maximum output required time after clock: 3.701ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -307,10 +302,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 2.648ns (frequency: 377.643MHz)
-  Total number of paths / destination ports: 45 / 19
+  Clock period: 2.675ns (frequency: 373.804MHz)
+  Total number of paths / destination ports: 48 / 20
 -------------------------------------------------------------------------
-Delay:               2.648ns (Levels of Logic = 1)
+Delay:               2.675ns (Levels of Logic = 1)
   Source:            counter_2 (FF)
   Destination:       s5 (FF)
   Source Clock:      clk rising
@@ -320,18 +315,18 @@ Delay:               2.648ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               2   0.447   0.845  counter_2 (counter_2)
-     LUT4:I1->O            9   0.205   0.829  GND_1_o_GND_1_o_AND_1_o1 (GND_1_o_GND_1_o_AND_1_o)
-     FDE:CE                    0.322          s5
+     FDRE:C->Q             2   0.447   0.845  counter_2 (counter_2)
+     LUT4:I1->O           10   0.205   0.856  GND_1_o_GND_1_o_AND_1_o1 (GND_1_o_GND_1_o_AND_1_o)
+     FDRE:CE                   0.322          s5
     ----------------------------------------
-    Total                      2.648ns (0.974ns logic, 1.674ns route)
-                                       (36.8% logic, 63.2% route)
+    Total                      2.675ns (0.974ns logic, 1.701ns route)
+                                       (36.4% logic, 63.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 20 / 14
+  Total number of paths / destination ports: 28 / 22
 -------------------------------------------------------------------------
-Offset:              3.506ns (Levels of Logic = 2)
+Offset:              3.733ns (Levels of Logic = 2)
   Source:            reset (PAD)
   Destination:       s5 (FF)
   Destination Clock: clk rising
@@ -340,31 +335,31 @@ Offset:              3.506ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             4   1.222   0.931  reset_IBUF (reset_IBUF)
-     LUT4:I0->O            9   0.203   0.829  GND_1_o_GND_1_o_AND_1_o1 (GND_1_o_GND_1_o_AND_1_o)
-     FDE:CE                    0.322          s5
+     IBUF:I->O            11   1.222   1.130  reset_IBUF (reset_IBUF)
+     LUT4:I0->O           10   0.203   0.856  GND_1_o_GND_1_o_AND_1_o1 (GND_1_o_GND_1_o_AND_1_o)
+     FDRE:CE                   0.322          s5
     ----------------------------------------
-    Total                      3.506ns (1.747ns logic, 1.759ns route)
-                                       (49.8% logic, 50.2% route)
+    Total                      3.733ns (1.747ns logic, 1.986ns route)
+                                       (46.8% logic, 53.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
   Total number of paths / destination ports: 5 / 5
 -------------------------------------------------------------------------
-Offset:              3.668ns (Levels of Logic = 1)
-  Source:            s2 (FF)
-  Destination:       crc<4> (PAD)
+Offset:              3.701ns (Levels of Logic = 1)
+  Source:            s5 (FF)
+  Destination:       crc<1> (PAD)
   Source Clock:      clk rising
 
-  Data Path: s2 to crc<4>
+  Data Path: s5 to crc<1>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              3   0.447   0.650  s2 (s2)
-     OBUF:I->O                 2.571          crc_4_OBUF (crc<4>)
+     FDRE:C->Q             4   0.447   0.683  s5 (s5)
+     OBUF:I->O                 2.571          crc_1_OBUF (crc<1>)
     ----------------------------------------
-    Total                      3.668ns (3.018ns logic, 0.650ns route)
-                                       (82.3% logic, 17.7% route)
+    Total                      3.701ns (3.018ns logic, 0.683ns route)
+                                       (81.6% logic, 18.4% route)
 
 =========================================================================
 
@@ -376,14 +371,14 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    2.648|         |         |         |
+clk            |    2.675|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 6.36 secs
+Total CPU time to Xst completion: 6.19 secs
  
 --> 
 
@@ -391,5 +386,5 @@ Total memory usage is 4494080 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)
-Number of infos    :    4 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
 

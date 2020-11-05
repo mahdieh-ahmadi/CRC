@@ -26,41 +26,48 @@ module crc(
     );
 
 reg s1,s2,s3,s4,s5;
-reg w2,w3;
-wire w1;
+wire w1,w2;
 reg [2:0] counter;
 
-initial
+initial // initial value
 begin
 	s1 = 0;
 	s2 = 0;
 	s3 = 0;
 	s4 = 0;
 	s5 = 0;
-	w2 = 0;
-//	w1 = 0;
 	counter = 0;
 	crc = 4'b0000;
 end
 
+
+////////////////// update wires
+assign w2 = s5; 
 assign w1 = data_in[counter] + w2;
 
+
+///////////////// update registers at clock
 always @(posedge clk)
 begin
 	
 	if (counter != 5 && reset != 1) begin
-//		w1 <= data_in[counter] + w2;
 		s1 <= w1;
 		s2 <= s1;
 		s3 <= s2 + w1;
 		s4 <= s3;
 		s5 <= s4;
-		w2 <= s5;
 		crc <= {s1,s2,s3,s4,s5};
 		counter <= counter +1;
 	end
+	
 	if (reset == 1) begin
-		counter <= 4;
+		s1 <= 0;
+		s2 <= 0;
+		s3 <= 0;
+		s4 <= 0;
+		s5 <= 0;
+		counter <= 0;
+		crc <= 4'b0000;	
 	end
 	
 end

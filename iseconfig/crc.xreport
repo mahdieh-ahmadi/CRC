@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2020-11-05T16:22:57</DateModified>
+  <DateModified>2020-11-05T16:34:09</DateModified>
   <ModuleName>crc</ModuleName>
-  <SummaryTimeStamp>2020-11-05T16:17:42</SummaryTimeStamp>
+  <SummaryTimeStamp>2020-11-05T16:27:30</SummaryTimeStamp>
   <SavedFilePath>E:/university/3991/fpga/homeworks/CRC/iseconfig/crc.xreport</SavedFilePath>
   <ImplementationReportsDirectory>E:/university/3991/fpga/homeworks/CRC</ImplementationReportsDirectory>
   <DateInitialized>2020-11-05T14:54:02</DateInitialized>

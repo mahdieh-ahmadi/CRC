@@ -15,43 +15,52 @@
 # do {test_crc.fdo}
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
-# Start time: 16:23:58 on Nov 05,2020
+# Start time: 16:34:47 on Nov 05,2020
 # vlog -reportprogress 300 crc.v 
 # -- Compiling module crc
 # 
 # Top level modules:
 # 	crc
-# End time: 16:23:58 on Nov 05,2020, Elapsed time: 0:00:00
+# End time: 16:34:47 on Nov 05,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
-# Start time: 16:23:58 on Nov 05,2020
+# Start time: 16:34:47 on Nov 05,2020
 # vlog -reportprogress 300 test_crc.v 
 # -- Compiling module test_crc
 # 
 # Top level modules:
 # 	test_crc
-# End time: 16:23:58 on Nov 05,2020, Elapsed time: 0:00:00
+# End time: 16:34:47 on Nov 05,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
-# Start time: 16:23:58 on Nov 05,2020
+# Start time: 16:34:47 on Nov 05,2020
 # vlog -reportprogress 300 C:/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v 
 # -- Compiling module glbl
 # 
 # Top level modules:
 # 	glbl
-# End time: 16:23:58 on Nov 05,2020, Elapsed time: 0:00:00
+# End time: 16:34:47 on Nov 05,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -voptargs=""+acc"" -t 1ps -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip -lib work work.test_crc glbl 
-# Start time: 16:23:58 on Nov 05,2020
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Start time: 16:34:49 on Nov 05,2020
+# ** Note: (vsim-3812) Design is being optimized...
 # Loading work.test_crc(fast)
 # Loading work.crc(fast)
 # Loading work.glbl(fast)
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: mahdie  Hostname: DESKTOP-RBQDBFC  ProcessID: 12960
-#           Attempting to use alternate WLF file "./wlftkeahga".
+#           Attempting to use alternate WLF file "./wlft6v9dzs".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftkeahga
+#           Using alternate file: ./wlft6v9dzs
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
+run
+run
+run
+run
+run
+run
+run
+# End time: 16:37:28 on Nov 05,2020, Elapsed time: 0:02:39
+# Errors: 0, Warnings: 2

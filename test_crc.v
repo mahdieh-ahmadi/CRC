@@ -47,7 +47,23 @@ module test_crc;
 		data_in = 4'b0010;
 
 		// Wait 100 ns for global reset to finish
-		#100;
+		#1500;
+		reset = 1;
+		data_in = 4'b0111;
+		#200
+		reset = 0;
+		
+		#1500;
+		reset = 1;
+		data_in = 4'b0000;
+		#200
+		reset = 0;
+		
+		#1500;
+		reset = 1;
+		data_in = 4'b1001;
+		#200
+		reset = 0;
 		
 	
         
