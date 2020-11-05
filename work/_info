@@ -1,0 +1,105 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/university/3991/fpga/homeworks/CRC
+T_opt
+!s110 1604578827
+V6iY2INeKY:Db^Y6iKVZ>f2
+Z1 04 8 4 work test_crc fast 0
+Z2 04 4 4 work glbl fast 0
+=1-c85b76f47ed2-5fa3ee0b-23b-32a0
+Z3 o-quiet -auto_acc_if_foreign -work work -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip +acc
+Z4 tCvgOpt 0
+n@_opt
+Z5 OL;O;10.5;63
+R0
+T_opt1
+!s110 1604579471
+V:ae8>KEIn`<]MM0KcOTA]1
+R1
+R2
+=1-c85b76f47ed2-5fa3f08e-329-1634
+R3
+R4
+n@_opt1
+R5
+R0
+T_opt2
+!s110 1604580839
+VA7;1=IkAoKN]IQji_iaRM1
+R1
+R2
+=1-c85b76f47ed2-5fa3f5e7-44-235c
+R3
+R4
+n@_opt2
+R5
+vcrc
+Z6 !s110 1604580838
+!i10b 1
+!s100 VO:zg]0I1eAWKP[MflY<93
+IFA0amLEkfRkVmBJg=870j2
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1604580807
+8crc.v
+Fcrc.v
+L0 21
+Z8 OL;L;10.5;63
+r1
+!s85 0
+31
+Z9 !s108 1604580838.000000
+!s107 crc.v|
+!s90 -reportprogress|300|crc.v|
+!i113 0
+Z10 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R4
+vglbl
+R6
+!i10b 1
+!s100 UlJ]9LUWO:ZWoRO62F9fW3
+INz3046GECC=X7FgQ2]FR>3
+R7
+R0
+w1381681120
+8C:/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v
+FC:/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v
+L0 5
+R8
+r1
+!s85 0
+31
+R9
+!s107 C:/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v|
+!s90 -reportprogress|300|C:/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v|
+!i113 0
+R10
+R4
+vtest_crc
+R6
+!i10b 1
+!s100 UhiYm_h33nW_NVjL>_FM83
+IJT0<Cb?D1CTCJC`gk[glT3
+R7
+R0
+w1604579628
+8test_crc.v
+Ftest_crc.v
+L0 25
+R8
+r1
+!s85 0
+31
+R9
+!s107 test_crc.v|
+!s90 -reportprogress|300|test_crc.v|
+!i113 0
+R10
+R4
