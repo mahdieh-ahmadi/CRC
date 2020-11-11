@@ -43,7 +43,7 @@ end
 
 ////////////////// update wires
 assign w2 = s5; 
-assign w1 = data_in[counter] + w2;
+assign w1 = data_in[counter] ^ w2;
 
 
 ///////////////// update registers at clock
@@ -53,7 +53,7 @@ begin
 	if (counter != 5 && reset != 1) begin
 		s1 <= w1;
 		s2 <= s1;
-		s3 <= s2 + w1;
+		s3 <= s2 ^ w1;
 		s4 <= s3;
 		s5 <= s4;
 		crc <= {s1,s2,s3,s4,s5};

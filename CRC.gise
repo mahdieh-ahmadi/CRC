@@ -73,8 +73,9 @@
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
     <transform xil_pn:end_ts="1604577849" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1604577849">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1604581476" xil_pn:in_ck="2294195638518307031" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1604581476">
+    <transform xil_pn:end_ts="1604924890" xil_pn:in_ck="2294195638518307031" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1604924890">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="crc.v"/>
@@ -92,13 +93,13 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1604581476" xil_pn:in_ck="2294195638518307031" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1604581476">
+    <transform xil_pn:end_ts="1604924890" xil_pn:in_ck="2294195638518307031" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1604924890">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="crc.v"/>
       <outfile xil_pn:name="test_crc.v"/>
     </transform>
-    <transform xil_pn:end_ts="1604581478" xil_pn:in_ck="2294195638518307031" xil_pn:name="TRAN_MSimulateBehavioralModel" xil_pn:prop_ck="8499606024003363967" xil_pn:start_ts="1604581476">
+    <transform xil_pn:end_ts="1604924891" xil_pn:in_ck="2294195638518307031" xil_pn:name="TRAN_MSimulateBehavioralModel" xil_pn:prop_ck="8499606024003363967" xil_pn:start_ts="1604924890">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -109,6 +110,7 @@
     </transform>
     <transform xil_pn:end_ts="1604577429" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1604577428">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
     <transform xil_pn:end_ts="1604577429" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-656988756978914522" xil_pn:start_ts="1604577429">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -134,7 +136,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1604581461" xil_pn:in_ck="121612444" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="4925479577291734496" xil_pn:start_ts="1604581450">
+    <transform xil_pn:end_ts="1604924760" xil_pn:in_ck="121612444" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="4925479577291734496" xil_pn:start_ts="1604924745">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>

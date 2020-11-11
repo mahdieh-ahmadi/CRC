@@ -47,19 +47,19 @@ module test_crc;
 		data_in = 4'b0010;
 
 		// Wait 100 ns for global reset to finish
-		#1500;
+		#2000;
 		reset = 1;
 		data_in = 4'b0111;
 		#200
 		reset = 0;
 		
-		#1500;
+		#2000;
 		reset = 1;
 		data_in = 4'b0000;
 		#200
 		reset = 0;
 		
-		#1500;
+		#2000;
 		reset = 1;
 		data_in = 4'b1001;
 		#200
@@ -71,7 +71,7 @@ module test_crc;
 
 	end
 	
-	always #100 clk=~clk;
+	always #100 clk <= ~clk;
       
 endmodule
 
